@@ -19,3 +19,5 @@ If you are developing a production application, we recommend using TypeScript wi
 ## running it
 Start the dev server
 - npm run dev
+
+npm i react-helmet @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
