@@ -8,7 +8,7 @@ import Contact from "./pages/contact.jsx";
 import ReadArticle from "./pages/readArticle.jsx";
 import NotFound from "./pages/404.jsx";
 
-import "./app.css";
+import "./App.css";
 
 export default function App() {
 	return (
