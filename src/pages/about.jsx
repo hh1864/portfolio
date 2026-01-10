@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
 
 import INFO from "../data/user";
@@ -30,14 +28,7 @@ const About = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="about" />
-				<div className="content-wrapper">
-					<div className="about-logo-container">
-						<div className="about-logo">
-							<Logo width={46} />
-						</div>
-					</div>
-
+				<div className="content-wrapper page-shell">
 					<div className="about-container">
 						<div className="about-main">
 							<div className="about-right-side">
@@ -80,3 +71,4 @@ const About = () => {
 };
 
 export default About;
+

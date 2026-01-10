@@ -1,0 +1,15 @@
+@import "../../data/styles.css";
+
+.skills-document-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.skills-document-title {
+	width: 100%;
+}
+
+.skills-document-subtitle {
+	width: 100%;
+}

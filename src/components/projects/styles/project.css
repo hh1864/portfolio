@@ -1,72 +1,112 @@
 @import "../../../data/styles.css";
 
 .project {
-	mix-blend-mode: normal;
-	border-radius: 20px;
-	opacity: 0.8;
 	height: 100%;
 }
 
-.project a {
-	text-decoration: none;
-}
-
-.project:hover {
-	background: #fafafa;
-	opacity: 1;
-	transition: background-color 0.3s ease-in-out;
-}
-
-.project:hover .project-link {
-	color: var(--link-color);
-	transition: color 0.3s ease-in-out;
-}
-
 .project-container {
-	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	width: 280px;
+	border-radius: 20px;
+	overflow: hidden;
+	background: #ffffff;
+	border: 1px solid #e1e1e1;
+	box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08);
 }
 
-.project-logo {
-	width: 30px;
+.project-image {
+	height: 95px;
+	background: #f3f3f3;
 }
 
-.project-logo img {
+.project-image img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.project-body {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 24px 26px 18px;
+	flex: 1;
+	overflow: hidden;
 }
 
 .project-title {
 	font-family: var(--secondary-font);
 	color: var(--primary-color);
-	font-size: 16px;
-	padding-top: 15px;
-	margin-bottom: 1em;
+	font-size: 18px;
 	font-weight: 700;
 }
 
 .project-description {
 	color: var(--secondary-color);
+	line-height: 1.5;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
-.project-link {
+.project-folder {
 	display: flex;
 	align-items: center;
-	color: var(--secondary-color);
-	font-size: 12px;
-	padding-top: 20px;
+	gap: 10px;
+	margin: 0 20px 20px;
+	padding: 6px 10px;
+	border: 1px solid #b7b7b7;
+	border-radius: 10px;
+	background: #f1f1f1;
+	color: #111111;
+	text-decoration: none;
+	margin-top: auto;
+	transition: border-color 0.2s ease, background-color 0.2s ease,
+		transform 0.2s ease;
 }
 
-.project-link-icon {
-	padding-left: 5px;
-	font-size: 13px;
+.project-folder:hover {
+	border-color: #79b8ff;
+	background: #cfe8ff;
+	transform: translateY(-1px);
 }
 
-.project-link-text {
-	padding-left: 20px;
+.project-folder-icon {
+	width: 34px;
+	height: 34px;
+	border-radius: 6px;
+	border: 1px solid #caa14a;
+	background: linear-gradient(135deg, #f7dc9d 0%, #e7b45a 100%);
+}
+
+.project-folder-text {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.project-folder-name {
 	font-weight: 700;
+	color: #111111;
+}
+
+.project-folder-path {
+	font-size: 12px;
+	color: #555555;
+	word-break: break-all;
 }
 
 @media (max-width: 600px) {
-	.project {
-		height: 300px;
+	.project-container {
+		height: 275px;
+		width: 190px;
+	}
+
+	.project-image {
+		height: 90px;
 	}
 }
