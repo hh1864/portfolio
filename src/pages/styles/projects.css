@@ -22,9 +22,27 @@
 	padding-top: 120px;
 }
 
+.projects-page.page-content:before,
+.projects-page.page-content:after {
+	display: none;
+}
+
+.projects-page .content-wrapper,
+.projects-page .content-wrapper.page-shell {
+	max-width: none;
+	padding-left: 100px;
+	padding-right: 30px;
+}
+
 @media (max-width: 600px) {
 	.projects-container {
 		padding-top: 60px;
+	}
+
+	.projects-page .content-wrapper,
+	.projects-page .content-wrapper.page-shell {
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 
 	.projects-project {

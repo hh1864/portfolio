@@ -2,21 +2,20 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
+	justify-content: flex-start;
+	gap: 12px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	margin-left: -35px;
-	margin-right: -35px;
 }
 
 .all-projects-project {
-	width: calc(100% / 3);
+	flex: 0 0 auto;
 	box-sizing: border-box;
-	padding: 10px;
 	overflow: hidden;
 }
 
 @media (max-width: 600px) {
-	.all-projects-project {
-		width: calc(100% / 2);
+	.all-projects-container {
+		gap: 10px;
 	}
 }

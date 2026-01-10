@@ -1,0 +1,15 @@
+@import "../../data/styles.css";
+
+.document-app-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.document-app-title {
+	width: 100%;
+}
+
+.document-app-subtitle {
+	width: 100%;
+}

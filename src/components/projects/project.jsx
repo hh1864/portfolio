@@ -1,32 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/project.css";
 
 const Project = (props) => {
 	const { logo, title, description, linkText, link } = props;
+	const linkLabel = linkText || "Repository";
+	const linkPath = link ? link.replace(/^https?:\/\//, "") : "";
 
 	return (
 		<React.Fragment>
 			<div className="project">
-				<Link to={link}>
-					<div className="project-container">
-						<div className="project-logo">
-							<img src={logo} alt="logo" />
-						</div>
+				<div className="project-container">
+					<div className="project-image">
+						<img src={logo} alt={`${title} preview`} />
+					</div>
+					<div className="project-body">
 						<div className="project-title">{title}</div>
 						<div className="project-description">{description}</div>
-						<div className="project-link">
-							<div className="project-link-icon">
-								<FontAwesomeIcon icon={faLink} />
-							</div>
-
-							<div className="project-link-text">{linkText}</div>
-						</div>
 					</div>
-				</Link>
+					<a
+						className="project-folder"
+						href={link}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<div className="project-folder-icon" />
+						<div className="project-folder-text">
+							<div className="project-folder-name">{linkLabel}</div>
+							<div className="project-folder-path">{linkPath}</div>
+						</div>
+					</a>
+				</div>
 			</div>
 		</React.Fragment>
 	);
